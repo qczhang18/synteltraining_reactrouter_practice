@@ -1,6 +1,14 @@
+import React, {Component} from 'react';
+
 function Images(props){
 	// Map through images
-	return(
-		<p>Images go here as props</p>
-	)
+  let imagesMap = props.imagesMap.map((image)=>{
+    return (
+        <img className="img-responsive" src={image} />
+    );
+  });
+
+  return imagesMap;
 }
+
+export default Images;
